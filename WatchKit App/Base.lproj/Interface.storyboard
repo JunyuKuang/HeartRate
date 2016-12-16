@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Ready-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Ready" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" alignment="left" text=" " textAlignment="left" numberOfLines="0" id="15p-uL-ew8"/>
+                        <imageView width="1" height="50" alignment="left" verticalAlignment="bottom" id="331-vr-VMy"/>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Start" id="h8n-Ka-GGh">
+                            <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="startStopButtonDidTap" destination="AgC-eL-Hgc" id="gC8-N1-CUr"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="imageView" destination="331-vr-VMy" id="NdL-Ll-6Fn"/>
+                        <outlet property="realTimeHeartRateLabel" destination="15p-uL-ew8" id="knq-lt-egJ"/>
+                        <outlet property="startStopButton" destination="h8n-Ka-GGh" id="TsR-WA-tFL"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+</document>
