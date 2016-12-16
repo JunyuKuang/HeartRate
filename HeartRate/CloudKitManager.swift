@@ -31,29 +31,6 @@ extension HeartRateRecord {
     
 }
 
-//extension Record {
-//    
-//    init?(ckRecord: CKRecord) {
-//        guard let content = ckRecord["term"] as? String,
-//            let creationDateTimeIntervalSinceReferenceDate = ckRecord["creationDateTimeIntervalSinceReferenceDate"] as? TimeInterval
-//        else { return nil }
-//        
-//        self.content = content
-//        self.creationDate = Date(timeIntervalSinceReferenceDate: creationDateTimeIntervalSinceReferenceDate)
-//        self.localIdentifier = ckRecord.recordID.recordName
-//        self.isFavorited = ckRecord["isFavorited"] as? Bool ?? false
-//    }
-//    
-//    var ckRecord: CKRecord {
-//        let record = CKRecord(recordType: "Term", recordID: CKRecordID(recordName: localIdentifier, zoneID: CloudKitManager.customZoneID))
-//        record["term"] = content as CKRecordValue
-//        record["creationDateTimeIntervalSinceReferenceDate"] = creationDate.timeIntervalSinceReferenceDate as CKRecordValue
-//        record["isFavorited"] = isFavorited as CKRecordValue
-//        
-//        return record
-//    }
-//}
-
 
 /// To enable database changes push, enabled follow capabilities: `iCloud - CloudKit`, `Push Notification`, `Background Modes - Remote Notifications`.   
 class CloudKitManager {
@@ -63,7 +40,7 @@ class CloudKitManager {
     /// The zond ID is useful when you configure a CKRecord.
     static let customZoneID = CKRecordZoneID(zoneName: "HeartRate", ownerName: CKCurrentUserDefaultName)
     
-    private let privateDatabase = CKContainer.default().privateCloudDatabase // CKContainer.default().publicCloudDatabase
+    private let privateDatabase = CKContainer.default().privateCloudDatabase
     
     private struct TimeoutInterval {
         static let request: TimeInterval = 30
