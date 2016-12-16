@@ -1,6 +1,6 @@
 # HeartRate
 
-Use Apple Watch senser to monitor heart rates.
+Use Apple Watch sensor to monitor heart rates.
 
 ## Features
 
